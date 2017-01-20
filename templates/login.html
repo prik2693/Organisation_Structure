@@ -1,0 +1,20 @@
+<div ng-controller='LoginCtrl'>
+	 <div class="login" style="margin-top:10%">
+	     <form>
+        	<div style="margin-left:30%;margin-right:30%;margin-top:16%">
+                	<p>
+                        	<label for="username" class="uname" ><md-icon md-svg-icon="images/user.svg"></md-icon>&nbsp; <b style="font-size:20px"> Username </b></label>
+                        	<input class="field" name="username" required="required" placeholder="RIL User Id" type="text" ng-model="user.name">
+                        </p>
+                        <p>
+                        	<label for="password" class="youpasswd"><md-icon md-svg-icon="images/lock.svg"></md-icon>&nbsp; <b style="font-size:20px"> Password </b></label>
+                        	<input class="field" name="password" required="required" placeholder="RIL Password" type="password" ng-model="user.password">
+                        </p>
+                        <p class="keeplogin" style="padding-top:1%;padding-left:78%">
+				            <md-button class="md raised md primary" style="background-color:#5cb85c" ng-click="login()"><span class="place-right">Login&nbsp;</span></button>
+                        </p>
+            </div> 
+         </form>   
+     </div>    
+</div> 
+

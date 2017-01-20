@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng="en" ng-app="orgApp">
+  <head>
+    <!--[if IE]>
+    <script type="text/javascript">
+      alert ("It looks like you aren't using Google Chrome. To see our site correctly, please use Google Chrome browser.")
+    </script>
+    <![endif]-->
+      <link rel="stylesheet" href="css/angular-material-0.10.0.min.css">
+      <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
+  </head>
+  <body ng-controller="userCtrl">
+      <div style="width:100%;height:60px;background-color:#962828;z-index: 999999999999;position: fixed!important;top: 0!important;" layout="row">
+          <center style="color:white;margin-left:35%;margin-top:1%;font-size:xx-large">ORGANISATION STRUCTURE</center>
+      </div>
+      <div layout = "row" style="margin-top:6%">
+          <md-input-container class="md-block" style="width:40%;height:10%" flex-gt-xs>
+            <label>Organisation Id</label>
+            <input ng-model="orgId" required>
+          </md-input-container> 
+          <md-button class="md primary md raised" ng-click="getOrgStructure()" style="margin-top:1%;height:10%;background-color:antiquewhite">Submit</md-button>
+          <div layut="row" style="margin-left:16%">
+              <b>User's structure</b>
+              <table style="border-collapse:collapse;border:1px solid">
+              <thead>
+                  <tr style="border:1px solid">
+                      <th>Repo</th>
+                      <th>Team</th>
+                      <th>Org</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr ng-repeat="(key,value) in user_org_struct" style="border:1px solid">
+                      <td>{{value[0].repo}},{{value[1].repo}}</td>
+                      <td>{{key}}</td>
+                      <td>{{value[0].org}}</td>
+                  <tr>
+              </tbody>
+             </table>
+           </div>
+      </div>
+      <script type="text/ng-template"  id="tree_item_renderer.html">
+          {{data.title}}
+              <ul>
+                  <li ng-repeat="data in data.nodes" ng-include="'tree_item_renderer.html'"></li>
+              </ul>
+          </script>
+          <ul >
+              <li ng-repeat="data in org_struct" ng-include="'tree_item_renderer.html'"></li>
+          </ul>
+    
+
+        <script src="js/jquery.1.11.3.min.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/angular/angular.min.js"></script>
+        <script src="js/angular/angular-animate.min.js"></script>
+        <script src="js/angular/angular-aria.min.js"></script>
+        <script src="js/angular/angular-route.min.js"></script>
+        <script src="js/material/materialize.min.js"></script>
+        <script src="js/angular-material.min.js"></script>
+        <script type="text/javascript" src="js/angucomplete-alt.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script src="js/org.js"></script>
+  </body>
+</html>
+
