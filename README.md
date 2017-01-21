@@ -24,4 +24,6 @@ Databse dump - org_struct.sql
 
 For Database, I have used "PostgresSQL","AngularJs" for frontend,"Python" and "Flask" on the server side.
 I have set up the "uWSGI" application server to launch the application and "Nginx" to act as a front end reverse proxy.
+Install uwsgi with - pip install uwsgi 
 Command to start the uwsgi server :- uwsgi --ini organisation.ini,the logs are stored in organisation.log
+Install nginx server with nginx.conf file provided.
