@@ -20,6 +20,7 @@ Organisation 1
 
 getOrgDetails.py - API which takes organisation Id(through AJAX) from frontend as input and returns a JSON object representing the structure of organisation and its teams and their repos.
 getUserOrg.py - API that would return the repos, teams and organizations the logged-in/authenticated user is associated with.(here assuming the logged in userid = 1)
+Databse dump - org_struct.sql
 
 For Database, I have used "PostgresSQL","AngularJs" for frontend,"Python" and "Flask" on the server side.
 I have set up the "uWSGI" application server to launch the application and "Nginx" to act as a front end reverse proxy.
