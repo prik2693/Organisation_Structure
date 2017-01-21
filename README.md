@@ -23,4 +23,4 @@ getUserOrg.py - API that would return the repos, teams and organizations the log
 
 For Database, I have used "PostgresSQL","AngularJs" for frontend,"Python" and "Flask" on the server side.
 I have set up the "uWSGI" application server to launch the application and "Nginx" to act as a front end reverse proxy.
-Command to start the uwsgi server :- uwsgi --ini organisation.ini,the logs are stored in prganisation.log
+Command to start the uwsgi server :- uwsgi --ini organisation.ini,the logs are stored in organisation.log
