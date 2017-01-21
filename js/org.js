@@ -1,4 +1,4 @@
-var app = angular.module('orgApp',['ngRoute','ngAnimate','ngMaterial']);
+var app = angular.module('orgApp',[]);
 app.controller('userCtrl', ['$scope', '$http', '$location','$rootScope','$mdDialog','$window','$mdToast',function($scope, $http, $location, $rootScope,$mdDialog,$window,$mdToast) {
         $http.post('/py/getUserOrg',{}).
         success(function(data, status, headers, config) {
